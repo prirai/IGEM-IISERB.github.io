@@ -9,7 +9,7 @@
 /* Will be removed later. */
 
 .logo {
-    height: 163px;
+    height: 110px;
     border-radius: 12px;
 }
 
@@ -27,14 +27,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    align-self: flex-end;
-    justify-content: space-evenly;
+    align-content: stretch;
+    align-self: stretch;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .nav-con>li>div {
     width: 200px;
     height: 70px;
-    padding: 10px 0 10px 0;
+    padding: auto;
     border: 3px solid white;
     border-radius: 12px;
     text-align: center;
@@ -79,7 +81,7 @@
 
 /* Dropdown Content (Hidden by Default) */
 .pop-nav {
-    font-size: 40px;
+    font-size: 25px;
     width: 200px;
     list-style-type: none;
     display: none;
@@ -108,10 +110,6 @@
 
 .pop-nav:hover .nav-con {
     background-color: white;
-    color: var(--nav-col);
-}
-
-.pop-nav:hover .pop-con>a {
     color: var(--nav-col);
 }
 
