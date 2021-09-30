@@ -1,0 +1,161 @@
+:root {
+    --link-col: white;
+    --link-bg: black;
+}
+
+.overlay {
+    visibility: collapse;
+}
+
+.hfb {
+    visibility: collapse;
+}
+
+@media screen and (max-width:1000px) {
+
+    #menu-button {
+        position: absolute;
+        right: 5px;
+        margin: 10px;
+        width: 75px;
+        height: 75px;
+        background-color: transparent;
+        border: 5px solid transparent;
+        border-top: 5px solid var(--link-col);
+        border-bottom: 5px solid var(--link-col);
+        transition: 0.5s;
+    }
+
+    #menu-button:hover {
+        background-color: var(--link-col);
+        border-radius: 50%;
+    }
+
+    .hfb {
+        visibility: visible;
+    }
+
+    .closebtn {
+        color: var(--link-col);
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .closebtn:hover {
+        color: var(--link-bg);
+        background-color: var(--link-col);
+        border-radius: 50%;
+    }
+
+    .three-lines {
+        font-weight: 200;
+        cursor: pointer;
+        visibility: visible;
+        padding: auto;
+        width: 100px;
+        height: 100px;
+        color: var(--link-col);
+        text-align: center;
+        font-size: 100px;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+
+    .three-lines:hover {
+        color: var(--link-bg);
+        background-color: var(--link-col);
+    }
+
+    .three-lines:hover .nav-con {
+        visibility: visible;
+        z-index: 2;
+    }
+
+    .hfb {
+        visibility: visible;
+    }
+
+    .overlay {
+        visibility: visible;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: var(--link-bg);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .overlay a {
+            font-size: 20px
+        }
+
+        .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+
+    .nav-item {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .pop-con {
+        border: 2px solid var(--link-col);
+    }
+
+    .pop-con a {
+        color: var(--link-col);
+    }
+
+    .pop-nav {
+        position: fixed;
+        z-index: 5;
+        top: 30vh;
+        left: 5vw;
+        height: 60vh;
+        background-color: rgba(127, 127, 127, 0.8);
+        width: 80vw;
+        padding: 20% 5% 20% 5%;
+        border: none;
+        border-radius: 50px;
+    }
+
+    .pop-nav a {
+        width: 60%;
+        margin: auto auto 10% auto;
+    }
+
+    .pop-nav a:hover {
+        scale: 1.2;
+    }
+}

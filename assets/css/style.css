@@ -3,7 +3,20 @@
     margin: 0;
     display: block;
     font-family: 'Antykwa Poltawskiego';
+
+    --bubor: white;
+
+    --link-col: white;
+    --link-bg: black;
+
+    /* Theme Colors */
+    --pink: #D83F87;
     --nav-col: #45829E;
+    --blacky: #2A1B3D;
+    --bluish: #44318D;
+    --purply: #ED8074;
+    --grey: #A4B3B6;
+    --nav-col: #44318D;
 }
 
 /* Will be removed later. */
@@ -18,10 +31,12 @@
     align-items: center;
     border-radius: 12px;
     background-color: var(--nav-col);
+    height: 110px;
 }
 
 
 /***************************Navbar Styling******************************/
+
 .nav-con {
     list-style-type: none;
     display: flex;
@@ -76,7 +91,9 @@
     background-color: var(--nav-col);
     border: none;
     outline: none;
-    transition: 1s;
+    transition: 0.5s;
+    border: 2px solid black;
+    border-radius: 12px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -87,25 +104,32 @@
     display: none;
     position: absolute;
     padding: 0px;
-    background-color: #f1f1f1;
+    background-color: var(--bubor);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     transition: 2s;
     border: 3px solid white;
     border-radius: 12px;
+    margin-top: -25%;
+    padding-bottom: 12.5%;
 }
 
 /* Links inside the dropdown */
 .pop-nav a {
-    color: black;
+    background-color: var(--link-col);
+    color: var(--link-bg);
+    border: 2px solid var(--link-col);
     text-align: center;
     text-decoration: none;
     display: block;
+    border-radius: 12px;
 }
 
 /* Change color of dropdown links on hover */
 .pop-nav a:hover {
-    background-color: #ddd;
+    color: var(--link-col);
+    background-color: var(--link-bg);
+    scale: 1.2;
 }
 
 .pop-nav:hover .nav-con {
@@ -117,4 +141,39 @@
 .nav-item:hover .pop-nav {
     display: block;
     border-radius: 12px;
+}
+
+.three-lines {
+    visibility: hidden;
+}
+
+@media screen and (min-width:1000px) {
+
+    .pop-nav a:hover {
+        background-color: var(--link-bg);
+        border: 2px solid var(--grey);
+    }
+
+    .pop-nav a {
+        background-color: transparent;
+        border: none;
+        margin-bottom: 15px;
+        scale: 1.2;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .nav-con {
+        visibility: hidden;
+    }
+
+    .top-nav {
+        height: 110px;
+    }
+
+    .logo {
+        border-radius: 12px;
+        width: 250px;
+    }
+
 }
