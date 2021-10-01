@@ -29,9 +29,9 @@
 .top-nav {
     display: flex;
     align-items: center;
-    border-radius: 12px;
     background-color: var(--nav-col);
     height: 110px;
+    border-radius: 12px;
 }
 
 
@@ -141,10 +141,6 @@
 .nav-item:hover .pop-nav {
     display: block;
     border-radius: 12px;
-}
-
-.three-lines {
-    visibility: hidden;
 }
 
 @media screen and (min-width:1000px) {
