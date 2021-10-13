@@ -1,0 +1,19 @@
+#footer-container {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.footer-section {
+
+    margin: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .footer-section {
+        min-width: 30vw;
+        max-width: 30vw;
+    }
+}
